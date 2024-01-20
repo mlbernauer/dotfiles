@@ -7,7 +7,7 @@
 
 ## screen layout #exec_always --no-startup-id ~/.screen_layout.sh
 #exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png
-exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png
+exec_always --no-startup-id feh --bg-scale ~/.background.jpg
 
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -151,9 +151,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Start i3bar to display a workspace bar (plus the system information i3status
+set $bg-color				#171717
+set $inactive-bg-color		#171717
+set $text-color				$fg
+set $inactive-text-color	#67E6D
+set $urgent-bg-color		#E53935
+
 bar {
-	status_command i3status
-	font pango:DejaVu Sans Mono 7
+   status_command i3status
 }
 
 #### CUSTOM SETUP ####

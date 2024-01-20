@@ -93,7 +93,7 @@ URxvt.iso14755_52: false
 Xcursor.theme: Adwait
 
 URxvt.transparent: true
-URxvt.shading: 30
+URxvt.shading: 20
 
 !! Rofi
 rofi.color-window: argb:FF1d1f21,argb:FF1d1f21,argb:FF1d1f21
