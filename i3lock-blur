@@ -1,0 +1,2 @@
+FILE=$$.png
+import -quality 1 -resize 1920x1080 -window root $FILE && convert -blur 0x5 -resize 1920x1080 -quality 1 $FILE $FILE && i3lock -i $FILE && rm $FILE

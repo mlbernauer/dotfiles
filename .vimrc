@@ -1,6 +1,6 @@
 call plug#begin()
 Plug 'junegunn/vim-easy-align'
-Plut 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'aserebryakov/vim-todo-lists'
@@ -21,3 +21,6 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set number
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/.vimwiki'}]

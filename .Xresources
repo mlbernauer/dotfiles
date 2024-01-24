@@ -33,7 +33,6 @@ urxvt*shading: 30
 URxvt.depth: 32
 URxvt.saveLines: 10000
 URxvt*geometry: 96x30
-!URxvt*terminalName: rxvt-unicode-256color
 URxvt*visualBell: false
 
 !! Scrollbar
@@ -46,9 +45,9 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 !! Fonts
-!URxvt.font:	xft:White Rabbit:regular:size=12
-!URxvt.boldFont: xft:White Rabbit:bold:size=12
-URxvt.font:	xft:Ubuntu Mono:regular:size=14
+!URxvt.font:	xft:Ubuntu Mono:regular:size=14
+URxvt.font:	xft:DejaVu Sans Mono:regular:size=12
+
 URxvt.boldMode: true
 URxvt.letterSpace: 0
 
@@ -107,5 +106,4 @@ rofi.font: Xolonium 15
 rofi.bw: 0
 rofi.padding: 10
 rofi.eh: 1
-!rofi.separator-style: solid
 rofi.hide-scrollbar: true

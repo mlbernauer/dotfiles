@@ -62,8 +62,6 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -194,3 +192,4 @@ exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
 exec --no-startup-id xrandr --output eDP-1 --off --output HDMI-2 --mode "1920x1080"
 exec --no-startup-id wal --theme sexy-mikado
+bindsym $mod+Shift+l exec --no-startup-id bash ~/git/dotfiles/i3lock-blur 
