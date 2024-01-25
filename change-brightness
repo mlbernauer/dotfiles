@@ -1,0 +1,3 @@
+VAL=$(xrandr --verbose | perl -ne '/Brightness: (\d\.\d+)/ && print $1')
+NEWVAL=$(perl -e "print $1*$VAL")
+xrandr --output eDP-1 --brightness $NEWVAL
