@@ -117,88 +117,11 @@ if ! shopt -oq posix; then
 fi
 
 set -o vi
-
-export EDITOR=vim.gtk3
-export R_LIBS_USER="/home/mlbernauer/.R/"
-xrdb ~/.Xresources
-(cat ~/.cache/wal/sequences &)
-cat ~/.cache/wal/sequences
-
-
-export PATH="$PATH:/opt/pulsesecure/bin"
-export PATH="$PATH:/home/mlbernauer/.local/bin/"
-export PATH=$PATH:/home/mlbernauer/.cargo/bin
-export CENSUS_KEY=9c7c139cfda34bf3a28ef305a272da210fbf1828
-#export GITHUB_TOKEN=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
-export GITHUB_USER=mlbernauer
-
-export DRUG_DICT="/home/mlbernauer/git/drugmap/rxnorm.dict"
-export NOTES="/home/mlbernauer/.notes/"
 PROMPT_DIRTRIM=1
-alias todo="vim ~/.todo.md"
-alias t="timecard"
-alias connect-speaker="bluetoothctl connect 5C:FB:7C:C3:64:A8"
-alias connect-headphones="bluetoothctl connect F8:AB:E5:46:36:17"
-alias connect-earphones="bluetoothctl connect F4:4E:FD:00:05:02"
-alias vpn="sudo openconnect --passwd-on-stdin -u michaelb https://webvpn.rs21.io <<< jMr3p743@"
-alias xclip="xclip -selection c"
-alias htop="htop -s PERCENT_CPU"
-alias dm="xrandr --output eDP-1 --off --output DP-2 --mode 2560x1440"
-alias lm="xrandr --output DP-1 --off --output eDP-1 --mode 1920x1080"
-alias linechart='gnuplot -p -e "set autoscale;plot \"-\" using 1 with linespoints notitle"'
-alias barchart='gnuplot -p -e "set autoscale; plot \"-\" using 1 with boxes notitle"'
-alias getpetname="printf '%s\n' {love,cuddle,snuggle,kiss,kissy,tickle,wiggle}\" \"{muffin,buscuit,waffle,cupcake,cookie} | shuf | head -n1"
-alias weather='curl wttr.in/albuquerque'
-alias stitch="perl -ne 's/!include// ? print qx/cat \$_/ : print'"
-alias csvc="perl <(curl -s https://raw.githubusercontent.com/mlbernauer/scripts/main/csvcols)"
-alias battery="upower -i $(upower -e | grep BAT) | grep percentage"
-
-#. "$HOME/.cargo/env"
-export CENSUS_API_KEY="2abf85470d393b3bc249771dd1f1acaffe8be7a8"
-
-PATH="/home/mlbernauer/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/mlbernauer/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/mlbernauer/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/mlbernauer/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/mlbernauer/perl5"; export PERL_MM_OPT;
-
-archive () {
-	tar cvf $1.tar.gz -I pigz $1
-	rm -rf $1
-}
-rmd-render () {
-	Rscript -e "rmarkdown::render('$1')"
-}
-rmd-serve () {
-	Rscript -e "rmarkdown::run('$1')"
-}
-create-deck () {
-	ls *.$1 | perl -lne 'BEGIN{print "---\n  title:\n  date: \\today\n  theme: Dresden\n---\n"}; print "# $_\n![$_]($_)\n"'
-}
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/mlbernauer/.google-cloud-sdk/path.bash.inc' ]; then . '/home/mlbernauer/.google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/mlbernauer/.google-cloud-sdk/completion.bash.inc' ]; then . '/home/mlbernauer/.google-cloud-sdk/completion.bash.inc'; fi
-
-alias nvimr-help="cat ~/.nvim-r.txt"
-
-export LOCALIA_MODEL_PATH=/home/mlbernauer/git/landscan/new/models/
-export NOTES=/home/mlbernauer/.notes/
-export DRUGMAP=/home/mlbernauer/git/drugmap/DRUGMAP.txt
-export PATH=/home/mlbernauer/edirect:${PATH}
-export MIMIC=/home/mlbernauer/hdd/mimic-iv/db/mimic-iv.db
-
-function temp-sh () {
-	curl -F "file=@${1}" https://temp.sh/upload
-	echo
-}
-
-function create-new-flexdashboard () {
-	R -e 'rmarkdown::draft("dashboard.Rmd", template = "flex_dashboard_bslib", package = "flexdashboard")'
-}
-
-function shiny-run () {
-	Rscript -e "shiny::runApp(\"$1\", port = 8081)"
-}
+xrdb ~/.Xresources
+cat ~/.cache/wal/sequences
+#(cat ~/.cache/wal/sequences &)
