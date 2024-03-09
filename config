@@ -182,8 +182,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 ## screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 50%
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 50%
+bindsym XF86MonBrightnessUp exec --no-startup-id bash ./git/dotfiles/change-brightness 1.25
+bindsym XF86MonBrightnessDown exec --no-startup-id bash ./git/dotfiles/change-brightness 0.75
 bindsym $mod+Shift+d exec --no-startup-id /git/scripts/lock.sh
 
 exec --no-startup-id xset s off

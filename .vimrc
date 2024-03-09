@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'junegunn/vim-easy-align'
 Plug 'vimwiki/vimwiki'
+Plug 'jalvesaq/Nvim-R'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'aserebryakov/vim-todo-lists'
@@ -16,11 +17,10 @@ autocmd BufRead,BufNewFile *.md,*.rmd setlocal nospell
 colorscheme default
 highlight clear
 set t_Co=32
-set autoindent
-set noexpandtab
-set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set number
+set expandtab!
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/.vimwiki'}]

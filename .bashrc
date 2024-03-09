@@ -123,18 +123,15 @@ export R_LIBS_USER="/home/mlbernauer/.R/"
 xrdb ~/.Xresources
 (cat ~/.cache/wal/sequences &)
 cat ~/.cache/wal/sequences
-export GOOGLE_APPLICATION_CREDENTIALS="/home/mlbernauer/.veraset-prototype-d770b341df53.json"
-export PGPASSFILE='/home/mlbernauer/.pgpass'
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/mlbernauer/git/unmccc/instantclient_21_6
-export PATH="$PATH:/opt/mssql-tools/bin:/usr/local/bin/edirect/:/home/mlbernauer/git/scripts"
+
+
 export PATH="$PATH:/opt/pulsesecure/bin"
 export PATH="$PATH:/home/mlbernauer/.local/bin/"
-export PATH="$PATH:/usr/share/sqlcl/bin/"
-export PATH="$PATH:/home/mlbernauer/git/unmccc/bin"
+export PATH=$PATH:/home/mlbernauer/.cargo/bin
 export CENSUS_KEY=9c7c139cfda34bf3a28ef305a272da210fbf1828
-export GITHUB_TOKEN=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
+#export GITHUB_TOKEN=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
 export GITHUB_USER=mlbernauer
-export DATABASECONNECTOR_JAR_FOLDER=/home/mlbernauer/.ohdsi_drivers/
+
 export DRUG_DICT="/home/mlbernauer/git/drugmap/rxnorm.dict"
 export NOTES="/home/mlbernauer/.notes/"
 PROMPT_DIRTRIM=1
@@ -190,3 +187,18 @@ alias nvimr-help="cat ~/.nvim-r.txt"
 export LOCALIA_MODEL_PATH=/home/mlbernauer/git/landscan/new/models/
 export NOTES=/home/mlbernauer/.notes/
 export DRUGMAP=/home/mlbernauer/git/drugmap/DRUGMAP.txt
+export PATH=/home/mlbernauer/edirect:${PATH}
+export MIMIC=/home/mlbernauer/hdd/mimic-iv/db/mimic-iv.db
+
+function temp-sh () {
+	curl -F "file=@${1}" https://temp.sh/upload
+	echo
+}
+
+function create-new-flexdashboard () {
+	R -e 'rmarkdown::draft("dashboard.Rmd", template = "flex_dashboard_bslib", package = "flexdashboard")'
+}
+
+function shiny-run () {
+	Rscript -e "shiny::runApp(\"$1\", port = 8081)"
+}

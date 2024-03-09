@@ -1,18 +1,5 @@
-! ░█ █░ 
-! ▓▒▒▓ █▒██▒ ███ ▒███▒ ███ █ █ █▒██▒ ▓██▒ ███ ▒███▒ 
-! ██ ██ █ ▓▓ ▒█ █▒ ░█ █▓ ▓█ █ █ ██ █ ▓█ ▓ ▓▓ ▒█ █▒ ░█
-! ██ █ █ █ █▒░ █ █ █ █ █ █░ █ █ █▒░ 
-! ▒██░ █ █████ ░███▒ █ █ █ █ █ █ █████ ░███▒ 
-! █▒▒█ █ █ ▒█ █ █ █ █ █ █░ █ ▒█ 
-! ▒█ █░ █ ▓▓ █ █░ ▒█ █▓ ▓█ █▒ ▓█ █ ▓█ ▓ ▓▓ █ █░ ▒█ 
-! █▒ ▒█ █ ███▒ ▒███▒ ███ ▒██▒█ █ ▓██▒ ███▒ ▒███▒ 
- 
-
-!-----------------------------------------------------------------------
 ! Xft settings
-! path: ~/
 !-----------------------------------------------------------------------
-
 Xft.dpi: 96
 Xft.autohint: 0
 Xft.antialias: 1
@@ -21,33 +8,19 @@ Xft.hinting: 0
 Xft:hintstyle: hintnone
 Xft.lcdfilter: lcddefault
 
-
-!-----------------------------------------------------------------------
 ! URxvt settings 
 !-----------------------------------------------------------------------
-
-URxvt.internalBorder: 10
+URxvt.internalBorder: 8
 URxvt.externalBorder: 0
-URxvt.lineSpace: 2
-urxvt*shading: 30
-URxvt.depth: 32
 URxvt.saveLines: 10000
 URxvt*geometry: 96x30
-URxvt*visualBell: false
+URxvt*visualBell: flase
 
 !! Scrollbar
 URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.scrollBar_floating: false
-URxvt.scrollstyle: rxvt
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyKeypress: true
 
 !! Fonts
-!URxvt.font:	xft:Ubuntu Mono:regular:size=14
-URxvt.font:	xft:DejaVu Sans Mono:regular:size=12
-
+URxvt.font: xft:DejaVu Sans Mono:regular:size=11
 URxvt.boldMode: true
 URxvt.letterSpace: 0
 
@@ -57,23 +30,7 @@ URxvt.keysym.C-Down: perl:font-size:decrease
 URxvt.keysym.C-S-Up: perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
-!Home and End keys to jump to the beginning and end of lines
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
-
-!! Tabs
-URxvt.tabbed.tabbar-bg: -1
-URxvt.tabbed.tabbar-fg: -2
-URxvt.tabbed.tab-bg: -2
-URxvt.tabbed.tab-fg: -1
-URxvt.tabbed.title-bg: -1
-URxvt.tabbed.title-fg: -2
-URxvt.tabbed.autohide: true
-URxvt.tabbed.new-button: false
-URxvt.tabbed.title: true
-
 !! Copy/Paste and URl handling
-! url-select (part of urxvt-perls package)
 URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select,font-size
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.underlineURLs: True 
@@ -81,29 +38,18 @@ URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.Control-Shift-V: perl:pasta:paste
 URxvt.url-select.autocopy: true
 URxvt.url-select.underline: true
-URxvt.url-launcher: /usr/bin/chromium
+URxvt.url-launcher: /usr/bin/google-chrome
 URxvt.matcher.button: 1
 
-!! Disable the stupid ctrl+shift 'feature'
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-
-!! Cursor
-Xcursor.theme: Adwait
-
+!! Background transparency
 URxvt.transparent: true
 URxvt.shading: 20
 
 !! Rofi
-rofi.color-window: argb:FF1d1f21,argb:FF1d1f21,argb:FF1d1f21
-rofi.color-normal: argb:FF1d1f21, #f0f0f0,argb:FF1d1f21 ,argb:FF1d1f21 , argb:FF1d1f21
-rofi.color-urgent: argb:FF1d1f21, argb:FF1d1f21,argb:FF1d1f21 ,argb:FF1d1f21 , argb:FF1d1f21
-rofi.color-active: argb:FF1d1f21, argb:FF1d1f21,argb:FF1d1f21 ,argb:FF1d1f21 , argb:FF1d1f21
-rofi.width: 50
-rofi.lines: 5
-rofi.columns: 1
-rofi.font: Xolonium 15
-rofi.bw: 0
-rofi.padding: 10
-rofi.eh: 1
+rofi.font: xft:DejaVu Sans Mono:regular:size=24
 rofi.hide-scrollbar: true
+rofi.padding: 10
+rofi.width: 25
+rofi.lines: 3
+rofi.eh: 1
+rofi.bw: 0
