@@ -7,7 +7,7 @@
 
 ## screen layout #exec_always --no-startup-id ~/.screen_layout.sh
 #exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png
-exec_always --no-startup-id feh --bg-scale ~/.background.jpg
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper.png
 
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -189,5 +189,5 @@ bindsym $mod+Shift+d exec --no-startup-id /git/scripts/lock.sh
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
-exec --no-startup-id wal --theme sexy-mikado
+exec --no-startup-id wal --theme sexy-material
 bindsym $mod+Shift+l exec --no-startup-id bash ~/git/dotfiles/i3lock-blur 

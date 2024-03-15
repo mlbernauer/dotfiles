@@ -117,11 +117,17 @@ if ! shopt -oq posix; then
 fi
 
 set -o vi
-PROMPT_DIRTRIM=1
-PERL5LIB="/home/mlbernauer/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/mlbernauer/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/mlbernauer/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/mlbernauer/perl5"; export PERL_MM_OPT;
-xrdb ~/.Xresources
-cat ~/.cache/wal/sequences
-#(cat ~/.cache/wal/sequences &)
+export PATH="$PATH:~/git/scripts"
+export PATH="$PATH:/opt/pulsesecure/bin"
+export PATH="$PATH:/home/mlbernauer/.local/bin/"
+export PATH="$PATH:/home/mlbernauer/.cargo/bin"
+export EDITOR="nvim"
+export R_LIBS_USER="/home/mlbernauer/.R/"
+export CENSUS_KEY="9c7c139cfda34bf3a28ef305a272da210fbf1828"
+export CENSUS_API_KEY="2abf85470d393b3bc249771dd1f1acaffe8be7a8"
+export GITHUB_TOKEN="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"
+export GITHUB_USER="mlbernauer"
+export MIMIC="/data/mimic-iv/db/mimic-iv.db"
+export PROMPT_DIRTRIM=1
+export MAPBOX_API_KEY="pk.eyJ1IjoibWxiZXJuYXVlciIsImEiOiJjazVxMnoyeTgxM3JkM2twY3dtcXU4eWV0In0.6i_-dPGlqHAG_vr7FB_Z_A"
+(cat ~/.cache/wal/sequences &)

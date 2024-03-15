@@ -14,13 +14,14 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " vim settings
 autocmd BufRead,BufNewFile *.md,*.rmd setlocal nospell 
-colorscheme default
+"colorscheme default
 highlight clear
 set t_Co=32
-set shiftwidth=4
-set softtabstop=4
-set number
-set expandtab!
+
+" convert tab to 4 space, autoindent 4 spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/.vimwiki'}]
